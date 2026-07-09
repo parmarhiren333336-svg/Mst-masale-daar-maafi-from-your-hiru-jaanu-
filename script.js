@@ -163,32 +163,26 @@ setInterval(() => {
 }, 800);
 
 // 😤 Still Angry Button (Mobile + Desktop)
-
-function moveNoButton() {
+buttonsArea.addEventListener("touchstart", () => {
 
     const maxX = window.innerWidth - noBtn.offsetWidth - 20;
     const maxY = window.innerHeight - noBtn.offsetHeight - 20;
 
     noBtn.style.position = "fixed";
-    noBtn.style.zIndex = "9999";
     noBtn.style.left = Math.random() * maxX + "px";
     noBtn.style.top = Math.random() * maxY + "px";
-}
-
-// Mobile
-noBtn.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    moveNoButton();
-}, { passive: false });
-
-// Desktop
-noBtn.addEventListener("mouseenter", moveNoButton);
-
-// Agar click ho jaye to bhi bhaag jaye
-noBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    moveNoButton();
 });
+
+buttonsArea.addEventListener("mousemove", () => {
+
+    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = Math.random() * maxX + "px";
+    noBtn.style.top = Math.random() * maxY + "px";
+});
+
 
 
 
