@@ -93,6 +93,7 @@ const finalSection = document.getElementById("finalSection");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 
+const buttonsArea = document.getElementById("buttonsArea");
 // Journey → Gift
 giftBtn.onclick = () => {
     journey.style.display = "none";
