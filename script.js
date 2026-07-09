@@ -73,3 +73,59 @@ startBtn.onclick = () => {
    Part 2
    (Continue...)
 ========================== */
+/* ==========================
+   OPERATION MANAO MAHI ❤️
+   Part 2
+========================== */
+
+const giftBtn = document.getElementById("giftBtn");
+const giftSection = document.getElementById("giftSection");
+
+const openGift = document.getElementById("openGift");
+const letterSection = document.getElementById("letterSection");
+
+const nextBtn = document.getElementById("nextBtn");
+const roseSection = document.getElementById("roseSection");
+
+const smileBtn = document.getElementById("smileBtn");
+const finalSection = document.getElementById("finalSection");
+
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+// Journey → Gift
+giftBtn.onclick = () => {
+    journey.style.display = "none";
+    giftSection.classList.remove("hidden");
+};
+
+// Gift → Letter
+openGift.onclick = () => {
+    giftSection.style.display = "none";
+    letterSection.classList.remove("hidden");
+};
+
+// Letter → Rose
+nextBtn.onclick = () => {
+    letterSection.style.display = "none";
+    roseSection.classList.remove("hidden");
+};
+
+// Rose → Final
+smileBtn.onclick = () => {
+    roseSection.style.display = "none";
+    finalSection.classList.remove("hidden");
+
+    if (typeof confetti === "function") {
+        confetti({
+            particleCount: 180,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+    }
+};
+
+// Smile Button
+yesBtn.onclick = () => {
+    yesBtn.innerHTML = "❤️ Thank You Mahi ❤️";
+};
