@@ -129,3 +129,60 @@ smileBtn.onclick = () => {
 yesBtn.onclick = () => {
     yesBtn.innerHTML = "❤️ Thank You Mahi ❤️";
 };
+/* ==========================
+   OPERATION MANAO MAHI ❤️
+   Part 3
+========================== */
+
+// Floating Hearts
+setInterval(() => {
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = "-30px";
+    heart.style.fontSize = (20 + Math.random() * 20) + "px";
+    heart.style.opacity = "0.9";
+    heart.style.pointerEvents = "none";
+    heart.style.transition = "transform 6s linear, top 6s linear";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.top = window.innerHeight + "px";
+        heart.style.transform = "rotate(360deg)";
+    }, 100);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6200);
+
+}, 800);
+
+
+// 😤 Still Angry Button (Unlimited Move)
+
+function moveNoButton() {
+
+    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = Math.random() * maxX + "px";
+    noBtn.style.top = Math.random() * maxY + "px";
+}
+
+// Desktop
+noBtn.addEventListener("mouseover", moveNoButton);
+
+// Mobile
+noBtn.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    moveNoButton();
+});
+
+
+// Final Message
+console.log("❤️ Website created by Hiru for Mahi ❤️");
