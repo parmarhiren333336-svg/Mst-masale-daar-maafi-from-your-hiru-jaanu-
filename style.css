@@ -132,3 +132,97 @@ body{
 #startBtn:hover{
     transform:scale(1.08);
 }
+/* =========================
+   OPERATION MANAO MAHI ❤️
+   Part 2
+========================= */
+
+/* Journey, Gift, Letter, Rose, Final */
+
+#journey,
+#giftSection,
+#letterSection,
+#roseSection,
+#finalSection{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+    z-index:2;
+}
+
+/* Glass Card */
+
+.glass-card,
+.letter{
+    width:90%;
+    max-width:430px;
+    padding:28px;
+    border-radius:25px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.glass-card h2,
+.letter h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.glass-card p,
+.letter p,
+#giftSection p,
+#roseSection p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Buttons */
+
+button{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+    background:#fff;
+    color:#ff4f93;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* Gift */
+
+.gift-box{
+    font-size:90px;
+    animation:giftFloat 2s ease-in-out infinite;
+}
+
+@keyframes giftFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* Rose */
+
+.rose{
+    font-size:85px;
+    animation:rose 2s ease-in-out infinite;
+}
+
+@keyframes rose{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.12);}
+}
