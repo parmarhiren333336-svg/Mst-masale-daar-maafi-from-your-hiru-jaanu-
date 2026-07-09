@@ -226,3 +226,70 @@ button:hover{
     0%,100%{transform:scale(1);}
     50%{transform:scale(1.12);}
 }
+/* =========================
+   OPERATION MANAO MAHI ❤️
+   Part 3
+========================= */
+
+/* Final Buttons */
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:16px;
+    opacity:.9;
+    position:relative;
+    z-index:2;
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero h3{
+    font-size:20px;
+}
+
+#typing{
+    font-size:17px;
+}
+
+button{
+    width:100%;
+    max-width:320px;
+}
+
+.buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.glass-card,
+.letter{
+    padding:22px;
+}
+
+.gift-box{
+    font-size:80px;
+}
+
+.rose{
+    font-size:75px;
+}
+
+}
